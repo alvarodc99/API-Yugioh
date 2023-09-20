@@ -1,0 +1,17 @@
+body {
+  background-image: url(/images/fondo2.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.display-1 {
+  text-shadow: 10px 5px rgb(132, 102, 64);
+  font-family: fantasy;
+}
+
+.active-page {
+  background-color: white !important;
+  color: black !important;
+}
