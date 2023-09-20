@@ -95,7 +95,7 @@ function renderPagination() {
 
     // Add "..." to indicate more pages
     const ellipsis = document.createElement('span');
-    ellipsis.textContent = '...'; // Changed to indicate more pages
+    ellipsis.textContent = '...';
     paginationContainer.appendChild(ellipsis);
   }
 
