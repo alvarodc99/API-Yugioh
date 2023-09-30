@@ -12,7 +12,24 @@ body {
 }
 
 
-.active-page {
-  background-color: white !important;
-  color: black !important;
+#cardBody {
+  background-color: #FAE296;
+  color: black;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.cardMarketURL{
+  font-size: larger;
+  color: #574f38;
+}
+
+.btn{
+  background-color: rgb(132, 102, 64) !important;
+  border-color: black !important;
+}
+
+.active-page{
+  background-color: #FAE296 !important;
+  border-color: white !important;
+  border-width:  2px !important;
 }

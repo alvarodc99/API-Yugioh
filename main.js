@@ -50,6 +50,7 @@ function displayCurrentPage() {
         cardColumn.classList.add('col-lg-4', 'col-md-6');
         cardColumn.appendChild(card);
         cardRow.appendChild(cardColumn);
+      
       }
     }
 
@@ -63,10 +64,10 @@ function createCardElement(image, title, description, price) {
   card.classList.add('card');
   card.innerHTML = `
     <img src="${image}" class="card-img-top" style="height: 500px" alt="${title}">
-    <div class="card-body bg-dark text-white rounded">
+    <div class="card-body" id="cardBody">
       <h5 class="card-title">${title}</h5>
       <div class="card-text">${description}</div>
-      <p class="card-text">Card Market Price: US$${price}</p>
+      <p class="card-text"><a class="cardMarketURL" href="https://www.cardmarket.com/en/YuGiOh/Products/Search?searchString=${encodeURIComponent(title)}" target="_blank">Card market price: US$${price}</a></p>
     </div>
   `;
   return card;
@@ -85,7 +86,7 @@ function renderPagination() {
   if (currentPage > 4) {
     const firstPageButton = document.createElement('button');
     firstPageButton.textContent = '1';
-    firstPageButton.classList.add('btn', 'btn-dark');
+    firstPageButton.classList.add('btn');
     firstPageButton.addEventListener('click', () => {
       currentPage = 1;
       displayCurrentPage();
@@ -102,7 +103,7 @@ function renderPagination() {
   for (let i = startPage; i <= endPage; i++) {
     const pageButton = document.createElement('button');
     pageButton.textContent = i;
-    pageButton.classList.add('btn', 'btn-dark');
+    pageButton.classList.add('btn');
     pageButton.addEventListener('click', () => {
       currentPage = i;
       displayCurrentPage();
@@ -121,7 +122,7 @@ function renderPagination() {
   if (totalPages - currentPage > 3) {
     const lastPageButton = document.createElement('button');
     lastPageButton.textContent = totalPages;
-    lastPageButton.classList.add('btn', 'btn-dark');
+    lastPageButton.classList.add('btn');
     lastPageButton.addEventListener('click', () => {
       currentPage = totalPages;
       displayCurrentPage();
